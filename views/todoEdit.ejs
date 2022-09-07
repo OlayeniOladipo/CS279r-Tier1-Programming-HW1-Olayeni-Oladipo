@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- Similar HTML code to first Programming HW0, so I won't explain as many lines due
+     to understanding from last week. -->
+
+<head>
+    <title>Todo App</title>
+    <!-- Connect to style.css -->
+    <link rel="stylesheet" href="/static/stylesheets/style.css" type="text/css">
+    <!-- Import fonds-->
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Candal|Chewy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="todo-container">
+        <h2>To-Do List</h2>
+        <div class="todo">
+            <!-- Form is used to collect user inputs. Method attribute of POST specifies
+                 how to send the form-data in req.body of HTTP request. -->
+            <form action="" method="POST" class="todo-header">
+                <input type="text" name="content">
+                <button type="submit"><span class="fas fa-plus"></span></button>
+            </form>
+            <!-- ul represents list of items. -->
+            <ul class="todo-list">
+                <!-- <% %> allows for code injections variable referenced in .find calls. -->
+                <% todoTasks.forEach(details=> { %>
+                    <% if (details._id==idTask) { %>
+                        <!-- li represents the particular list item. -->
+                        <li class="todo-list-item">
+                            <!-- action attribute specifics form-handler. /edit/:id is referenced in index.js -->
+                            <form action="/edit/<%= details._id %>" method="POST">
+                                <input type="text" value="<%= details.content %>" name="content">
+                                <button type="submit">Confirm</button>
+                                <a href="/" class="cancel">Cancel</a>
+                            </form>
+                        </li>
+                        <% } else { %>
+                            <li class="todo-list-item">
+                                <div class="todo-list-item-name">
+                                    <%= details.content %>
+                                </div>
+                                <a href="/edit/<%= details._id %>" class="edit"> <span class="fas fa-edit"></span>
+                                </a>
+                                <a href="/remove/<%= details._id %>" class="remove"> <span class="fas fa-times"></span>
+                                </a>
+                            </li>
+                        <% } %>
+                 <% }) %>
+            </ul>
+        </div>
+    </div>
+</body>
