@@ -4,6 +4,8 @@
 Olayeni Oladipo <br />
 September 2, 2022 <br />
 
+**Important files to view:** index.js, views/todo.ejs, views/todoEdit.ejs, public/stylesheet/style.css, models/TodoTask.js
+
 **Reflection:** What are the significant software concepts that this combination of technologies has that plain HTML, CSS, and JS does not? Or that they handle significantly differently?
 
 1) I first noticed the difference in data storage. MongoDB is a distinct data storage program that allows for safer connection with a whitelist of allowed users and a few more added lines of code to connect to the database. For HTML/CSS/JS, I had a the web storage API, Storage. I believe WebStorage is better for smaller amounts of data while MongoDB seems more scalable.
