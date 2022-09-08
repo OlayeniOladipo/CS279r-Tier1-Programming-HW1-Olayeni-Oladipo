@@ -4,20 +4,22 @@
 Olayeni Oladipo <br />
 September 2, 2022 <br />
 
-*Reflection:* What are the significant software concepts that this combination of technologies has that plain HTML, CSS, and JS does not? Or that they handle significantly differently?
+**Reflection:** What are the significant software concepts that this combination of technologies has that plain HTML, CSS, and JS does not? Or that they handle significantly differently?
 
+1) I first noticed the difference in data storage. MongoDB is a distinct data storage program that allows for safer connection with a whitelist of allowed users and a few more added lines of code to connect to the database. For HTML/CSS/JS, I had a the web storage API, Storage. I believe WebStorage is better for smaller amounts of data while MongoDB seems more scalable.
+2) .EJS file usage with MongoDB and Node.js instead of HTML files that HTML/CSS/JS uses. EJS (Embedded JavaScript) allows better for the dynamic rendering of web pages given that you can use JavaScript within the HTML to bind dynamic data to the webpage. This is comparison to having to code into your JS file, new invocations of HTML sections when adding dynamic data (as I did with new todo list items in HW0).
+3) Again, with Node.JS vs JavaScript, Node.JS allows for execution outside of the browser, but in HTML/CSS/JS, the web browser executes the javascript.
 
-npm init
-
-Instructions to launch prototype:
+**Instructions** to launch prototype:
 
 1) Clone or download this repo, saving the files to a directory
 2) Open terminal and CD into the directory of the downloaded files.
 3) Open up terminal and enter:
 > npm init
-4) Make sure you have necessary packages installed. Enter the following into your terminal.
+4) Skip if you already have the below installed. Otherwise, make sure you have necessary packages installed. Enter the following into your terminal.
 > npm install --save express mongoose ejs dotenv
 > npm install --save-dev nodemon
+5) Enter the following in your terminal.
 > npm start
 
 Open the link http://localhost:3000/ and play around with the following tools:
@@ -40,3 +42,6 @@ Used the following to additionally inform my comments:
 - https://thecodebarbarian.com/how-find-works-in-mongoose.html  <br />
 - https://mongoosejs.com/docs/api.html#model_Model-find  <br />
 - https://www.w3schools.com/tags/att_form_method.asp
+
+Sources used to inform my reflection above:
+- https://www.geeksforgeeks.org/difference-between-index-ejs-and-index-html/ <br />
