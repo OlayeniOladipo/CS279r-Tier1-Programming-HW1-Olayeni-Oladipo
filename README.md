@@ -17,7 +17,7 @@ September 2, 2022 <br />
 3) Open up terminal and enter:
 > npm init
 4) Skip if you already have the below installed. Otherwise, make sure you have necessary packages installed. Enter the following into your terminal.
-> npm install --save express mongoose ejs dotenv
+> npm install --save express mongoose ejs dotenv  <br />
 > npm install --save-dev nodemon
 5) Enter the following in your terminal.
 > npm start
